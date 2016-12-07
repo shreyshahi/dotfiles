@@ -8,6 +8,8 @@ Plug 'nvie/vim-flake8'
 Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/indentpython'
+Plug 'jakezhaojb/vim-torch-snipmate'
+Plug 'lua.vim'
 call plug#end()
 
 
