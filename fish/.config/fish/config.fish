@@ -1,5 +1,6 @@
 set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
 
+abbr -a e 'nvim'
 
 if command -v exa > /dev/null
 	abbr -a l 'exa'
