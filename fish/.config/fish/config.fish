@@ -1,6 +1,12 @@
 set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
 
+set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore-vcs --hidden'
+
 abbr -a e 'nvim'
+abbr -a g 'git'
+abbr -a gs 'git status'
+abbr -a m 'make'
+abbr -a c 'cargo'
 
 if command -v exa > /dev/null
 	abbr -a l 'exa'
