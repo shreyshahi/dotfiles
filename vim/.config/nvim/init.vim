@@ -48,7 +48,8 @@ endif
 
 
 set background=dark
-colorscheme gruvbox-dark-hard
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 syntax on
 
 let g:secure_modelines_allowed_items = [
