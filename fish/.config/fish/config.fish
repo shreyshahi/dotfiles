@@ -1,4 +1,4 @@
-set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin /home/shrey/bin
+set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin /home/shrey/bin /home/shrey/.cargo/bin
 
 set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore-vcs --hidden'
 
