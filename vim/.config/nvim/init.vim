@@ -14,6 +14,7 @@ Plug 'justinmk/vim-sneak'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
@@ -37,6 +38,10 @@ Plug 'plasticboy/vim-markdown'
 " color scheme
 Plug 'morhetz/gruvbox'
 call plug#end()
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='gruvbox'
 
 " deal with colors
 if !has('gui_running')
