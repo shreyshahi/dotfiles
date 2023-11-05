@@ -43,10 +43,7 @@ call plug#end()
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
-"let g:airline_left_sep='>'
-"let g:airline_right_sep='<'
 let g:airline_theme='gruvbox'
 
 " deal with colors
@@ -80,17 +77,6 @@ if has('nvim')
     noremap <C-q> :confirm qall<CR>
 end
 
-" Javascript
-let javaScript_fold=0
-
-" Java
-let java_ignore_javadoc=1
-
-" Latex
-let g:latex_indent_enabled = 1
-let g:latex_fold_envs = 0
-let g:latex_fold_sections = []
-
 " Open hotkeys
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
@@ -99,32 +85,11 @@ nmap <leader>; :Buffers<CR>
 nmap <leader>w :w<CR>
 
 
-" Don't confirm .lvimrc
-let g:localvimrc_ask = 0
-
-" racer + rust
-" https://github.com/rust-lang/rust.vim/issues/192
-let g:rustfmt_autosave = 1
-let g:rustfmt_emit_files = 1
-let g:rustfmt_fail_silently = 0
-let g:rust_clip_command = 'xclip -selection clipboard'
-"let g:racer_cmd = "/usr/bin/racer"
-"let g:racer_experimental_completer = 1
-let $RUST_SRC_PATH = systemlist("rustc --print sysroot")[0] . "/lib/rustlib/src/rust/src"
-
 " Completion
 " Better display for messages
 set cmdheight=2
 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
-
-" Golang
-let g:go_play_open_browser = 0
-let g:go_fmt_fail_silently = 1
-let g:go_fmt_command = "goimports"
-let g:go_bin_path = expand("~/dev/go/bin")
-
-
 
 " =============================================================================
 " # Editor settings
@@ -157,7 +122,7 @@ set splitright
 set splitbelow
 
 " Permanent undo
-set undodir=~/.vimdid
+set undodir=~/.vim/undo
 set undofile
 
 " Decent wildmenu
@@ -190,12 +155,6 @@ nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
-
-" Very magic by default
-nnoremap ? ?\v
-nnoremap / /\v
-cnoremap %s/ %sm/
-
 
 " =============================================================================
 " # GUI settings
@@ -378,10 +337,6 @@ nnoremap <leader>q g<c-g>
 " Keymap for replacing up to next _ or -
 noremap <leader>m ct_
 
-" I can type :help on my own, thanks.
-map <F1> <Esc>
-imap <F1> <Esc>
-
 " =============================================================================
 " # Autocommands
 " =============================================================================
@@ -418,8 +373,4 @@ autocmd Filetype html,xml,xsl,php source ~/.config/nvim/scripts/closetag.vim
 " # Footer
 " =============================================================================
 
-" nvim
-if has('nvim')
-	runtime! plugin/python_setup.vim
-endif
 
