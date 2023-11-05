@@ -8,7 +8,6 @@ call plug#begin()
 
 " Load plugins
 " VIM enhancements
-Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 
@@ -35,12 +34,19 @@ Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+"Git integration
+Plug 'tpope/vim-fugitive'
+
 " color scheme
 Plug 'morhetz/gruvbox'
 call plug#end()
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts = 1
+"let g:airline_left_sep='>'
+"let g:airline_right_sep='<'
 let g:airline_theme='gruvbox'
 
 " deal with colors
@@ -57,19 +63,6 @@ set background=dark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 syntax on
-
-let g:secure_modelines_allowed_items = [
-                \ "textwidth",   "tw",
-                \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
-                \ "shiftwidth",  "sw",
-                \ "expandtab",   "et",   "noexpandtab", "noet",
-                \ "filetype",    "ft",
-                \ "foldmethod",  "fdm",
-                \ "readonly",    "ro",   "noreadonly", "noro",
-                \ "rightleft",   "rl",   "norightleft", "norl",
-                \ "colorcolumn"
-                \ ]
 
 " from http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 if executable('ag')
@@ -207,7 +200,7 @@ cnoremap %s/ %sm/
 " =============================================================================
 " # GUI settings
 " =============================================================================
-set guioptions-=T " Remove toolbar
+"set guioptions-=T " Remove toolbar
 set vb t_vb= " No more beeps
 set backspace=2 " Backspace over newlines
 set nofoldenable
