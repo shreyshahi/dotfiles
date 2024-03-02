@@ -370,6 +370,11 @@ autocmd BufRead *.xlsx.axlsx set filetype=ruby
 " Script plugins
 autocmd Filetype html,xml,xsl,php source ~/.config/nvim/scripts/closetag.vim
 
+" Check if coc-pyright is installed, and install it if it's not
+if empty(glob('~/.config/coc/extensions/node_modules/coc-pyright'))
+    autocmd VimEnter * CocInstall coc-pyright
+endif
+
 " =============================================================================
 " # Footer
 " =============================================================================
