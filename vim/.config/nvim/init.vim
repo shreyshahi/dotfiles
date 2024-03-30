@@ -332,8 +332,8 @@ nnoremap <leader><leader> <c-^>
 " <leader>, shows/hides hidden characters
 nnoremap <leader>, :set invlist<cr>
 
-" <leader>q shows stats
-nnoremap <leader>q g<c-g>
+" <leader>q closes the buffer properly https://stackoverflow.com/questions/1864394/vim-and-nerd-tree-closing-a-buffer-properly
+nnoremap <leader>q :bp<cr>:bd #<cr>
 
 " Keymap for replacing up to next _ or -
 noremap <leader>m ct_
