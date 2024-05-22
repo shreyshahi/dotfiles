@@ -45,3 +45,7 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 eval /home/shrey/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+if test -f ~/.config/fish/local_config.fish
+    source ~/.config/fish/local_config.fish
+end
+
